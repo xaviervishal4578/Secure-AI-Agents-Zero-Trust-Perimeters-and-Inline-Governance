@@ -1,0 +1,13 @@
+{
+  "displayName": "hello-world-agent",
+  "description": "hello-world-agent ADK Agent managed by REST framework.",
+  "interfaces": [
+    {
+      "url": "https://${REGION}-aiplatform.googleapis.com/reasoningEngines/v1/projects/${PROJECT_NUMBER}/locations/${REGION}/reasoningEngines/${INSTANCE_ID}/api",
+      "protocolBinding": "HTTP_JSON"
+    }
+  ],
+  "agentSpec": {
+    "type": "NO_SPEC"
+  }
+}

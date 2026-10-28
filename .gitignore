@@ -1,0 +1,32 @@
+# Ignore everything in home directory except portfolio repository files
+/*
+!/.gitignore
+!/.env.example
+!/README.md
+!/src/
+!/config/
+!/deployment/
+!/scripts/
+
+# Python & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+
+# Terraform State & Provider Cache
+**/.terraform/
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.*
+**/terraform.tfvars
+
+# Environment & Runtime Metadata
+.env
+.env.local
+**/deployment_metadata.json

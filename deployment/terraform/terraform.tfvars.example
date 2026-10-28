@@ -1,0 +1,31 @@
+# ==============================================================================
+# Terraform Variable Values Template (terraform.tfvars.example)
+# ==============================================================================
+# Copy to terraform.tfvars and populate with your Google Cloud environment values.
+
+project_id                         = "your-gcp-project-id"
+project_number                     = "000000000000"
+organization_id                    = "000000000000"
+region                             = "us-central1"
+
+# Networking & Agent Gateway
+vpc_network_name                   = "governed-agent-vpc"
+subnet_name                        = "agent-private-subnet"
+network_attachment_name            = "gateway-egress-na"
+agent_gateway_name                 = "gateway-egress"
+artifact_registry_repo             = "agent-repo"
+
+# Security Enforcement Policy Switches
+# Set enable_iap_enforcement = false for initial DRY_RUN discovery, then true for active zero-trust enforcement
+enable_iap_enforcement             = true
+
+# Set enable_model_armor = true to attach inline CONTENT_AUTHZ prompt injection & DLP guardrails
+enable_model_armor                 = true
+enable_vertex_ai_integration       = true
+vertex_ai_inspect_only             = false
+
+# Model Armor & Sensitive Data Protection (DLP) Templates
+model_armor_request_template_id    = "agw-request-template"
+model_armor_response_template_id   = "agw-response-template"
+model_armor_inspect_template_id    = "agw-ssn-inspect-template"
+model_armor_deidentify_template_id = "agw-ssn-redaction-template"
